@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter";
+}
+
+.image-sequence-container-hero {
+  width: 100%;
+  height: 250vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.image-sequence-container-inner-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  top: -3vh;
+  transform: translateY(calc(8 * 1%));
+  padding-bottom: 34.8148148148%;
+}
+
+canvas {
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  will-change: transform, opacity;
+  transform-origin: 50% 100%;
+  display: block;
+  transform-origin: 50% 67%;
+  transition: opacity 200ms;
+}
+
+.text-radial {
+  background: radial-gradient(
+    150.17% 121.33% at 45.58% 49.96%,
+    #fff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-radial-2 {
+  background: radial-gradient(
+    175.28% 175.28% at 50% 7.39%,
+    #151515 0%,
+    #a1a1a1 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient {
+  background: linear-gradient(180deg, #151515 0%, rgba(21, 21, 21, 0) 217.47%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.circle {
+  width: 250vmax;
+  height: 250vmax;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+}
+
+.header-grey {
+  background: #f3f3f5;
+}
+
+.header-grey ul li {
+  color: #050f20;
+}
+
+.header-grey svg path {
+  fill: #050f20;
+}
+
+.header-grey button {
+  color: #252525;
+  background: #0000001a;
+}
+
+.rotate-svg-90 svg {
+  transition: ease 300ms;
+}
+
+.rotate-svg-90:hover svg {
+  transform: rotate(-90deg);
+}
+
+.rotate-svg-90:hover svg path {
+  stroke: white;
+}
+
+.card img {
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
